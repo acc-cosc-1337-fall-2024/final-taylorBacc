@@ -53,3 +53,28 @@ TEST_CASE("Verify Roll class") {
 		REQUIRE(state == true);
 	}
 }
+
+TEST_CASE("Verify Shooter class") {
+	bool state;
+	Die d1, d2;
+	Roll newRoll(d1, d2);
+	Shooter newShooter;
+
+	std::cout<<"Testing Shooter class:"<<std::endl;
+
+	for(int i = 0; i < 10; i++)
+	{
+
+		int currentRoll = newShooter.throw_dice(d1, d2)->roll_value();
+		std::cout<<currentRoll<<std::endl;
+		if(currentRoll >= 2 && currentRoll <= 12)
+		{
+			state = true;
+		}
+		else
+		{
+			state = false;
+		}
+		REQUIRE(state == true);
+	}
+}
