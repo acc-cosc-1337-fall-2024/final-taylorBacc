@@ -5,7 +5,7 @@
 #ifndef DIE_H
 #define DIE_H
 
-class DIE{
+class Die{
 
     public:
     int roll();

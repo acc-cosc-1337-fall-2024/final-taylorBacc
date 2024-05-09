@@ -1,9 +1,9 @@
 //
 #include"die.h"
 
-int DIE::roll()
+int Die::roll()
 {
-    srand(time(0));
+    srand(rand()*time(NULL));
 
     return rand() % 6 + 1;
 }
