@@ -11,6 +11,9 @@ TEST_CASE("Verify Test Configuration", "verification") {
 }
 
 TEST_CASE("Verify die class") {
+
+	srand(time(0));
+
 	bool state;
 	Die newdie;
 
@@ -18,9 +21,9 @@ TEST_CASE("Verify die class") {
 
 	for(int i = 0; i < 10; i++)
 	{
-		int testdie = newdie.roll();
-		std::cout<<testdie<<std::endl;
-		if(testdie >= 1 && testdie <= 6)
+		int rollValue = newdie.roll();
+		std::cout<<rollValue<<std::endl;
+		if(rollValue >= 1 && rollValue <= 6)
 		{
 			state = true;
 		}
@@ -33,6 +36,9 @@ TEST_CASE("Verify die class") {
 }
 
 TEST_CASE("Verify Roll class") {
+
+	srand(time(0));
+
 	bool state;
 	Die d1, d2;
 	Roll roller(d1, d2);
@@ -57,6 +63,9 @@ TEST_CASE("Verify Roll class") {
 }
 
 TEST_CASE("Verify Shooter class") {
+
+	srand(time(0));
+
 	bool state;
 	Die d1, d2;
 	Roll newRoll(d1, d2);
@@ -83,6 +92,10 @@ TEST_CASE("Verify Shooter class") {
 
 
 TEST_CASE("Verify come_out and point phases") {
+
+	srand(time(0));
+
+
 	int new_point = 4;
 	Die d1, d2;
 	Roll newRoll(d1, d2);

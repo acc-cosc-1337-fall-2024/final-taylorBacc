@@ -5,5 +5,5 @@ int Die::roll()
 {
     //srand(rand()*time(NULL));
 
-    return rand() % 6 + 1;
+    return rand() % sides + 1;
 }
