@@ -3,7 +3,7 @@
 
 int Die::roll()
 {
-    srand(rand()*time(NULL));
+    //srand(rand()*time(NULL));
 
     return rand() % 6 + 1;
 }
